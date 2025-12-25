@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepFense Framework | Modular Deepfake Audio Detection</title>
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="assets/img/logo.png" alt="DeepFense Logo">
+                <span>DeepFense</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <div class="dropdown">
+                    <a href="#modules" class="dropdown-trigger">Modules <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#frontends">Frontends</a>
+                        <a href="#backends">Backends</a>
+                        <a href="#losses">Losses</a>
+                    </div>
+                </div>
+                <a href="#quickstart">Quickstart</a>
+
+                <a href="https://deepfense-framework.readthedocs.io/" target="_blank">Docs</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="https://github.com/Yaselley/deepfense-framework" target="_blank"
+                    class="btn btn-primary github-btn">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container text-center">
+            <div class="hero-content mx-auto">
+                <div class="badge badge-white">v1.0 Now Available</div>
+                <h1 class="text-white">Build, Train, and Deploy <br>Deepfake Audio Detectors</h1>
+                <p class="text-white-opacity">An open-source, configuration-driven toolkit for state-of-the-art audio
+                    defense.</p>
+                <div class="hero-buttons justify-center">
+                    <a href="#quickstart" class="btn btn-white btn-lg">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Fundamental Building Blocks</h2>
+                <p>DeepFense is built upon key concepts that enable flexible and powerful detection pipelines.</p>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="icon-box blue">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <h3>Modular Design</h3>
+                    <p>Decoupled architecture allows you to swap Wav2Vec2 for WavLM or AASIST for ResNet with a single
+                        line of config.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon-box purple">
+                        <i class="fas fa-file-code"></i>
+                    </div>
+                    <h3>Configuration-Driven</h3>
+                    <p>All hyperparameters, augmentation pipelines, and model architectures are defined in simple YAML
+                        files.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon-box green">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
+                    <h3>Advanced Augmentations</h3>
+                    <p>Built-in pipelines for RawBoost, RIR reverb, Codec simulation, and noise addition to robustify
+                        your models.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon-box orange">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Standardized Metrics</h3>
+                    <p>Automatic tracking of EER, minDCF, and F1-score with integrated WandB logging and checkpointing.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section id="modules" class="modules bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Core Modules</h2>
+                <p>Explore DeepFense's specialized components for building detection systems.</p>
+            </div>
+
+            <div class="modules-grid">
+                <div id="frontends" class="module-card">
+                    <div class="module-icon"><i class="fas fa-ear-listen"></i></div>
+                    <h3>Frontends</h3>
+                    <ul class="module-list">
+                        <li>Wav2Vec 2.0</li>
+                        <li>WavLM</li>
+                        <li>HuBERT</li>
+                        <li>MERT</li>
+                        <li>EAT</li>
+                    </ul>
+                </div>
+
+                <div id="backends" class="module-card">
+                    <div class="module-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Backends</h3>
+                    <ul class="module-list">
+                        <li>AASIST</li>
+                        <li>ECAPA-TDNN</li>
+                        <li>RawNet2</li>
+                        <li>Res2Net</li>
+                        <li>MLP</li>
+                    </ul>
+                </div>
+
+                <div id="losses" class="module-card">
+                    <div class="module-icon"><i class="fas fa-scale-balanced"></i></div>
+                    <h3>Loss Functions</h3>
+                    <ul class="module-list">
+                        <li>OC-Softmax</li>
+                        <li>AM-Softmax</li>
+                        <li>A-Softmax</li>
+                        <li>Cross Entropy</li>
+                    </ul>
+                </div>
+
+                <div id="optimizers" class="module-card">
+                    <div class="module-icon"><i class="fas fa-sliders"></i></div>
+                    <h3>Optimizers</h3>
+                    <ul class="module-list">
+                        <li>Adam</li>
+                        <li>AdamW</li>
+                        <li>SGD</li>
+                        <li>RMSprop</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quickstart Section -->
+    <section id="quickstart" class="quickstart">
+        <div class="container">
+            <div class="section-header">
+                <h2>Installation</h2>
+            </div>
+
+            <div class="code-block-container">
+                <div class="code-block">
+                    <div class="code-header">Install via pip</div>
+                    <pre><code class="bash">pip install deepfense</code></pre>
+                    <button class="copy-btn"><i class="far fa-copy"></i></button>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header">Install from source</div>
+                    <pre><code class="bash">git clone https://github.com/Yaselley/deepfense-framework
+cd deepfense-framework
+pip install -e .</code></pre>
+                    <button class="copy-btn"><i class="far fa-copy"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community/Contribute -->
+    <section class="community bg-dark">
+        <div class="container text-center">
+            <h2>Join the Community</h2>
+            <p>DeepFense is an open-source project. We welcome contributions to add new models, datasets, and
+                improvements.</p>
+            <a href="https://github.com/Yaselley/deepfense-framework" target="_blank" class="btn btn-primary btn-lg">
+                Contribute on GitHub
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="assets/img/logo.png" alt="Logo" height="30">
+                <span>DeepFense</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/Yaselley/deepfense-framework">GitHub</a>
+                <a href="https://deepfense-framework.readthedocs.io/">Documentation</a>
+                <a href="https://pypi.org/project/deepfense/">PyPI</a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 DeepFense Team. Licensed under Apache 2.0.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Copy functionality
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const code = btn.previousElementSibling.innerText;
+                navigator.clipboard.writeText(code);
+                btn.innerHTML = '<i class="fas fa-check"></i>';
+                setTimeout(() => btn.innerHTML = '<i class="far fa-copy"></i>', 2000);
+            });
+        });
+    </script>
+</body>
+
+</html>
