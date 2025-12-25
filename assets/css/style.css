@@ -74,12 +74,42 @@ h3 {
 }
 
 
+
 .gradient-text {
     background: linear-gradient(135deg, var(--primary) 0%, #8b5cf6 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+/* Utilities */
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+/* Hugging Face Section */
+.huggingface-section {
+    padding: 80px 0;
+    background: #fffcf4;
+    border-top: 1px solid #fef3c7;
+}
+
+.hf-text {
+    color: #facc15;
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+.hf-card {
+    background: white;
+    border: 1px solid #fef3c7;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.hf-card:hover {
+    border-color: #facc15;
+}
+
 
 
 /* Buttons */
