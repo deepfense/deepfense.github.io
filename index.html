@@ -37,10 +37,11 @@
                         <a href="#frontends">Frontends</a>
                         <a href="#backends">Backends</a>
                         <a href="#losses">Losses</a>
+                        <a href="#augmentations">Augmentations</a>
                     </div>
                 </div>
                 <a href="#quickstart">Quickstart</a>
-
+                <a href="https://github.com/Yaselley/deepfense-framework/tree/master/recipes" target="_blank">Recipes</a>
                 <a href="https://deepfense.readthedocs.io/" target="_blank">Docs</a>
             </div>
 
@@ -86,7 +87,7 @@
                         <i class="fas fa-cubes"></i>
                     </div>
                     <h3>Modular Design</h3>
-                    <p>Decoupled architecture allows you to swap Wav2Vec2 for WavLM or AASIST for ResNet with a single
+                    <p>Decoupled architecture allows you to swap Wav2Vec2 for WavLM or AASIST for MLP with a single
                         line of config.</p>
                 </div>
 
@@ -104,8 +105,7 @@
                         <i class="fas fa-wave-square"></i>
                     </div>
                     <h3>Advanced Augmentations</h3>
-                    <p>Built-in pipelines for RawBoost, RIR reverb, Codec simulation, and noise addition to robustify
-                        your models.</p>
+                    <p>Built-in pipelines for RawBoost, RIR reverb, Codec simulation, Morph, AdditiveNoise, SpeedPerturb, AddBabble, DropFreq, DropChunk, and more to robustify your models.</p>
                 </div>
 
                 <div class="card">
@@ -164,10 +164,12 @@
                     <h3>Backends</h3>
                     <ul class="module-list">
                         <li>AASIST</li>
-                        <li>ECAPA-TDNN</li>
+                        <li>ECAPA_TDNN</li>
                         <li>RawNet2</li>
-                        <li>Res2Net</li>
                         <li>MLP</li>
+                        <li>Pool</li>
+                        <li>Nes2Net</li>
+                        <li>TCM</li>
                     </ul>
                 </div>
 
@@ -175,10 +177,10 @@
                     <div class="module-icon"><i class="fas fa-scale-balanced"></i></div>
                     <h3>Loss Functions</h3>
                     <ul class="module-list">
+                        <li>CrossEntropy</li>
                         <li>OC-Softmax</li>
                         <li>AM-Softmax</li>
                         <li>A-Softmax</li>
-                        <li>Cross Entropy</li>
                     </ul>
                 </div>
 
@@ -191,6 +193,23 @@
                         <li>SGD</li>
                         <li>RMSprop</li>
                         <li>SAM</li>
+                    </ul>
+                </div>
+
+                <div id="augmentations" class="module-card">
+                    <div class="module-icon"><i class="fas fa-magic"></i></div>
+                    <h3>Augmentations</h3>
+                    <ul class="module-list">
+                        <li>RawBoost</li>
+                        <li>RIR</li>
+                        <li>Codec</li>
+                        <li>Morph</li>
+                        <li>AdditiveNoise</li>
+                        <li>SpeedPerturb</li>
+                        <li>AddBabble</li>
+                        <li>DropFreq</li>
+                        <li>DropChunk</li>
+                        <li>DoClip</li>
                     </ul>
                 </div>
             </div>
@@ -227,7 +246,7 @@
                     <p>We host cleaned and aligned versions of major deepfake datasets (ASVspoof 2019/2021, In-the-wild)
                         for immediate use.</p>
                     <div class="mt-4">
-                        <a href="https://huggingface.co/deepfense" target="_blank" class="btn btn-outline">View
+                        <a href="https://huggingface.co/DeepFense" target="_blank" class="btn btn-outline">View
                             Datasets</a>
                     </div>
                 </div>
@@ -260,11 +279,17 @@ pip install -e .</code></pre>
 
             <div class="text-center mt-4">
                 <p style="margin-bottom: 1rem; color: var(--text-light);">Want to learn more? Check out our step-by-step
-                    tutorials.</p>
-                <a href="https://github.com/Yaselley/deepfense-framework/tree/master/docs" target="_blank"
-                    class="btn btn-outline">
-                    <i class="fab fa-github"></i> View Tutorials
-                </a>
+                    tutorials and pre-configured recipes.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://github.com/Yaselley/deepfense-framework/tree/master/docs" target="_blank"
+                        class="btn btn-outline">
+                        <i class="fab fa-github"></i> View Tutorials
+                    </a>
+                    <a href="https://github.com/Yaselley/deepfense-framework/tree/master/recipes" target="_blank"
+                        class="btn btn-outline">
+                        <i class="fas fa-book"></i> View Recipes
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -290,8 +315,10 @@ pip install -e .</code></pre>
             </div>
             <div class="footer-links">
                 <a href="https://github.com/Yaselley/deepfense-framework">GitHub</a>
-                <a href="https://deepfense-framework.readthedocs.io/">Documentation</a>
+                <a href="https://deepfense.readthedocs.io/">Documentation</a>
                 <a href="https://pypi.org/project/deepfense/">PyPI</a>
+                <a href="https://huggingface.co/DeepFense">HuggingFace</a>
+                <a href="https://github.com/Yaselley/deepfense-framework/tree/master/recipes">Recipes</a>
             </div>
             <div class="copyright">
                 &copy; 2025 DeepFense Team. Licensed under Apache 2.0.
