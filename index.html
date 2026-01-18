@@ -63,9 +63,9 @@
         <div class="container hero-container text-center">
             <div class="hero-content mx-auto">
                 <div class="badge badge-white">v1.0 Now Available</div>
-                <h1 class="text-white">Build, Simulate, and Train <br>Deepfake Audio Detectors</h1>
-                <p class="text-white-opacity">An open-source, configuration-driven toolkit for state-of-the-art audio
-                    defense.</p>
+                <h1 class="text-white">Build, Train and Evaluate <br>Deepfake Audio Detectors</h1>
+                <p class="text-white-opacity">An open-source, configuration-driven toolkit for audio
+                    deepfake detectors</p>
                 <div class="hero-buttons justify-center">
                     <a href="#quickstart" class="btn btn-white btn-lg">Get Started</a>
                 </div>
@@ -221,7 +221,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>DeepFense <span class="hf-text">♥</span> Hugging Face</h2>
-                <p>Accelerate your research with our open-source model zoo and processed datasets.</p>
+                <p>Accelerate your research with our open-source model zoo and datasets scripts.</p>
             </div>
 
             <div class="grid-2">
@@ -242,9 +242,16 @@
                     <div class="icon-box yellow">
                         <i class="fas fa-database"></i>
                     </div>
-                    <h3>Processed Datasets</h3>
-                    <p>We host cleaned and aligned versions of major deepfake datasets (ASVspoof 2019/2021, In-the-wild)
-                        for immediate use.</p>
+                        <h3>Processed Datasets</h3>
+                        <p>
+                        We provide cleaned and aligned versions of major audio deepfake benchmarks
+                        (ASVspoof 2019/2021, In-the-Wild) released as prepared Parquet files for immediate use.
+                        </p>
+                        <p>
+                        The Parquet files contain standardized metadata and file references rather than wav files.
+                        For reproducibility, we also provide scripts to automatically download the original datasets
+                        (wav files and labels) and construct the Parquet files.
+                        </p>
                     <div class="mt-4">
                         <a href="https://huggingface.co/DeepFense" target="_blank" class="btn btn-outline">View
                             Datasets</a>
